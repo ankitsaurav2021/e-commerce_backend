@@ -1,3 +1,5 @@
+import { prisma } from "../db";
+
 async function createProduct(req, res) {
   const { sellerId, productCode, name, description, price } = req.body;
 
@@ -13,6 +15,6 @@ async function createProduct(req, res) {
     });
     res.status(201).json(product);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to create product.' });
+    res.status(500).json({ error: "Failed to create product." });
   }
 }

@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL") // Set your database URL in the .env file
+  url      = env("DATABASE_URL")
 }
 
 // User model for User module CRUD operations
