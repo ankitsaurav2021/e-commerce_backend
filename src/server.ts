@@ -16,9 +16,16 @@ app.get("/", (req, res) => {
   res.json({ msg: "Hello!!!" });
 });
 
+app.get("/try/:id", (req, res) => {
+  return res.status(201).json({ msg: "User created" });
+});
+
 // Routes
-app.use("/api/users", userRoutes);
-app.use("/api/products", productRoutes);
+app.use("/api", userRoutes);
+app.use("/api/login", userRoutes);
+app.use("/api/edit", userRoutes);
+app.use("/api/edit-password", userRoutes);
+app.use("/api/create", productRoutes);
 app.use("/api/variants", variantRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/bulk-upload", bulkUploadRoutes);
