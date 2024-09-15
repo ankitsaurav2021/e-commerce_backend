@@ -18,6 +18,12 @@ model User {
   products Product[]
 }
 
+// Enum for language selection
+enum Language {
+  EN
+  AR
+}
+
 // Product model for Product module CRUD operations
 model Product {
   id          Int         @id @default(autoincrement())

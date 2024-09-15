@@ -1,5 +1,4 @@
 import express from 'express';
-// import { createOrder } from '../api/order';
 import { prisma } from "../db";
 const router = express.Router();
 
